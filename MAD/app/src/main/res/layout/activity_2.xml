@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity1">
+
+    <EditText
+        android:id="@+id/Value1"
+        android:layout_width="249dp"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="92dp"
+        android:ems="10"
+        android:hint="Int"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/Value2"
+        android:layout_width="252dp"
+        android:layout_height="68dp"
+        android:layout_below="@+id/Value1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="92dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Int" />
+
+    <Button
+        android:id="@+id/Enter"
+        android:layout_width="141dp"
+        android:layout_height="73dp"
+        android:layout_below="@+id/Value2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="148dp"
+        android:text="Enter" />
+
+    <TextView
+        android:id="@+id/Result"
+        android:layout_width="263dp"
+        android:layout_height="131dp"
+        android:layout_below="@+id/Enter"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="86dp"
+        android:hint="Result"
+        android:textSize="20dp"
+        />
+
+</RelativeLayout>

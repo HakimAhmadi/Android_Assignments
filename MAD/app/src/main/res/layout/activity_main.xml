@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignWithParentIfMissing="false"
+    android:layout_alignParentTop="false"
+    android:focusableInTouchMode="false"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/activity1"
+        android:layout_width="152dp"
+        android:layout_height="71dp"
+        android:layout_below="@+id/head"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="159dp"
+        android:layout_marginEnd="41dp"
+        android:text="Press for A1"
+        />
+
+    <Button
+        android:id="@+id/activity2"
+        android:layout_width="152dp"
+        android:layout_height="71dp"
+        android:layout_below="@+id/activity1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="49dp"
+        android:text="Press for A2" />
+
+    <Button
+        android:id="@+id/activity3"
+        android:layout_width="152dp"
+        android:layout_height="71dp"
+        android:layout_below="@+id/activity2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="235dp"
+        android:text="Press for A3" />
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="243dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:text="Press the activity accordingly"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+</RelativeLayout>
