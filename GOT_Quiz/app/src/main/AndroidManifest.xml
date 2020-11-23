@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GOT_Quiz">
+        <activity android:name=".End_Page"></activity>
         <activity
             android:name=".InfoPage"
             android:parentActivityName=".MainActivity" />

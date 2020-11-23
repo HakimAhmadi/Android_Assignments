@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/unnamed"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
     tools:context=".QuizBody">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/imageView"
@@ -21,14 +26,15 @@
 
     <RadioGroup
         android:id="@+id/Answers"
-        android:layout_width="152dp"
-        android:layout_height="192dp"
+        android:layout_width="155dp"
+        android:layout_height="196dp"
         android:layout_marginBottom="168dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/QuestionBox">
+        app:layout_constraintTop_toBottomOf="@+id/QuestionBox"
+        app:layout_constraintVertical_bias="0.412">
 
         <RadioButton
             android:id="@+id/Answer1"
@@ -62,13 +68,13 @@
 
     <TextView
         android:id="@+id/QuestionBox"
-        android:layout_width="290dp"
-        android:layout_height="67dp"
+        android:layout_width="357dp"
+        android:layout_height="65dp"
         android:layout_marginTop="4dp"
         android:text="TextView"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -76,11 +82,11 @@
         android:id="@+id/Submitbtn"
         android:layout_width="115dp"
         android:layout_height="53dp"
-        android:layout_marginTop="556dp"
+        android:layout_marginTop="16dp"
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/Answers" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
