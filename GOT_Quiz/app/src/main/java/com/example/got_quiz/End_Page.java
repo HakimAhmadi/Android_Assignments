@@ -23,15 +23,20 @@ public class End_Page extends AppCompatActivity {
                 playGame();
             }
         });
+
         endGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.exit(0);
+                mainpage();
             }
         });
     }
     public void playGame(){
         Intent intent = new Intent(this, QuizBody.class);
+        startActivity(intent);
+    }
+    public void mainpage(){
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }
