@@ -4,15 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:textAlignment="textEnd"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:id="@+id/activity2"
+        android:layout_width="174dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/note" />
+
+    <ImageView
+        android:id="@+id/activity3"
+        android:layout_width="174dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.599"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity2"
+        app:layout_constraintVertical_bias="0.099"
+        app:srcCompat="@drawable/note" />
+
+    <ImageView
+        android:id="@+id/activity1"
+        android:layout_width="174dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/activity2"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/note" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="341dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="104dp"
+        android:fontFamily="serif"
+        android:text="MAD Assignment 10"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:text="Activity 1: \nSimple Web-Browser\nusing WebView"
+        app:layout_constraintBottom_toBottomOf="@+id/activity1"
+        app:layout_constraintEnd_toEndOf="@+id/activity1"
+        app:layout_constraintStart_toStartOf="@+id/activity1"
+        app:layout_constraintTop_toTopOf="@+id/activity1" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:text="Activity 2: \nUsing Java-map creating CAR search engine"
+        app:layout_constraintBottom_toBottomOf="@+id/activity2"
+        app:layout_constraintEnd_toEndOf="@+id/activity2"
+        app:layout_constraintStart_toStartOf="@+id/activity2"
+        app:layout_constraintTop_toTopOf="@+id/activity2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:text="Activity 3: \nJava-Occurency palindrome and lexicograhic"
+        app:layout_constraintBottom_toBottomOf="@+id/activity3"
+        app:layout_constraintEnd_toEndOf="@+id/activity3"
+        app:layout_constraintStart_toStartOf="@+id/activity3"
+        app:layout_constraintTop_toTopOf="@+id/activity3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
