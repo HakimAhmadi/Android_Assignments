@@ -1,11 +1,18 @@
 package com.example.mad_assignment11;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,15 +21,38 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button activity1 = findViewById(R.id.Main_btn1);
-        Button activity2 = findViewById(R.id.Main_btn2);
+        Button signin = findViewById(R.id.A2_Signinbtn);
+        Button signup = findViewById(R.id.A2_Signupbtn);
+        EditText userid = findViewById(R.id.A2_SignInName);
+        EditText userpass = findViewById(R.id.A2_SignInPass);
 
-        activity1.setOnClickListener(view -> {
-            Intent intent = new Intent(this,Activity1.class);
-            startActivity(intent);
+        FirebaseAuth user = FirebaseAuth.getInstance();
+
+        signin.setOnClickListener(view -> {
+            String email = userid.getText().toString();
+            String password = userpass.getText().toString();
+
+            user.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Toast.makeText(MainActivity.this, "Successfully Logged In", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(MainActivity.this, Activity1_TreeNode.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
+                            }
+
+                        }
+                    });
         });
-        activity2.setOnClickListener(view -> {
-            Intent intent = new Intent(this,Activity2.class);
+
+        signup.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, Activity2_Signup.class);
             startActivity(intent);
         });
     }
